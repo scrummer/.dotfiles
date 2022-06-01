@@ -20,6 +20,7 @@ set modelines=0
 
 " Show line numbers
 set relativenumber
+set number
 
 " Show file stats
 set ruler
@@ -41,7 +42,7 @@ set expandtab
 set noshiftround
 
 " Cursor motion
-set scrolloff=3
+set scrolloff=80
 set backspace=indent,eol,start
 set matchpairs+=<:> " use % to jump between pairs
 runtime! macros/matchit.vim

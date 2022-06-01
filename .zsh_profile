@@ -1,0 +1,11 @@
+alias ll='ls -lah'
+alias 'do'='docker'
+alias doco='docker-compose'
+
+export PATH="$PATH:$HOME/.bin"
+export COMPOSER_MEMORY_LIMIT=-1
+export COMPOSER_PROCESS_TIMEOUT=2000
+export COMPOSE_HTTP_TIMEOUT=100
+
+# Custom (private) stuff
+[[ ! -f ~/.zsh_aliases ]] || source ~/.zsh_aliases
