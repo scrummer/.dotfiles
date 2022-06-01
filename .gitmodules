@@ -1,0 +1,4 @@
+[submodule "labymod"]
+	path = labymod
+	url = git@github.com:scrummer/.dotfiles-labymod.git
+	branch = main
