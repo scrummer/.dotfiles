@@ -8,4 +8,4 @@ export COMPOSER_PROCESS_TIMEOUT=2000
 export COMPOSE_HTTP_TIMEOUT=100
 
 # Custom (private) stuff
-[[ ! -f ~/.zsh_aliases ]] || source ~/.zsh_aliases
+[[ ! -f ~/labymod.zsh_profile ]] || source ~/labymod.zsh_profile
