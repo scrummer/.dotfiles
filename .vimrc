@@ -5,6 +5,16 @@ set nocompatible
 filetype off
 
 " TODO: Load plugins here (pathogen or vundle)
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
+Plug 'mhinz/vim-rfc'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+call plug#end()
 
 " Turn on syntax highlighting
 syntax on
@@ -13,7 +23,7 @@ syntax on
 filetype plugin indent on
 
 " TODO: Pick a leader key
-" let mapleader = ","
+let mapleader = " "
 
 " Security
 set modelines=0

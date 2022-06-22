@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/Users/jpache/dev'
+let g:netrw_dirhist_3='/Users/jpache/dev/.dotfiles'
+let g:netrw_dirhist_2='/Users/jpache/dev/.dotfiles/.vim'
+let g:netrw_dirhist_1='/Users/jpache/dev/.dotfiles'
