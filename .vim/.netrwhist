@@ -1,6 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =4
-let g:netrw_dirhist_4='/Users/jpache/dev'
-let g:netrw_dirhist_3='/Users/jpache/dev/.dotfiles'
-let g:netrw_dirhist_2='/Users/jpache/dev/.dotfiles/.vim'
-let g:netrw_dirhist_1='/Users/jpache/dev/.dotfiles'
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/Users/jpache/dev/dachcom/dachcom-tools/src/Classes/Command'
+let g:netrw_dirhist_1='/Users/jpache/dev/dachcom/dachcom-tools/src/Classes'
+let g:netrw_dirhist_0='/Users/jpache/dev/dachcom/dachcom-tools/src'
+let g:netrw_dirhist_9='/Users/jpache/dev/dachcom/dachcom-tools'
+let g:netrw_dirhist_8='/Users/jpache/dev/personal/go-playground'
+let g:netrw_dirhist_7='/Users/jpache/dev/.dotfiles'
+let g:netrw_dirhist_6='/Users/jpache/dev/dachcom/hosting/public/src/Provider/Monitoring'
+let g:netrw_dirhist_5='/Users/jpache/dev/dachcom/hosting/public/src/Provider'
+let g:netrw_dirhist_4='/Users/jpache/dev/dachcom/hosting/public/src'
+let g:netrw_dirhist_3='/Users/jpache/dev/dachcom/hosting/public'

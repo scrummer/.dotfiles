@@ -2,6 +2,9 @@ alias ll='ls -lah'
 alias 'do'='docker'
 alias doco='docker-compose'
 alias python=python3
+alias dsa='ddev sequelace'
+alias rmf='rm -rf'
+alias t='tmux'
 
 export PATH="$PATH:$HOME/.bin"
 export COMPOSER_MEMORY_LIMIT=-1
