@@ -16,6 +16,9 @@ Plug 'mhinz/vim-rfc'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 call plug#end()
 
+" Allow writing files without sudo
+command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+
 " Turn on syntax highlighting
 syntax on
 
