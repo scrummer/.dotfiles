@@ -5,3 +5,4 @@
 > Simply `brew install <app>`
 * vim
 * tmux
+* nvm
