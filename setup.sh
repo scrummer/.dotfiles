@@ -17,3 +17,5 @@ echo "labymod/zsh/labymod.zsh_profile"
 [[ -f "$DIR_PATH"/labymod/zsh/labymod.zsh_profile ]] && ln -sf "$DIR_PATH/labymod/zsh/labymod.zsh_profile" "$HOME/labymod.zsh_profile"
 echo ".vim/"
 ln -sf "$DIR_PATH"/.vim "$HOME"/.vim
+echo ".tmux.conf"
+ln -sf "$DIR_PATH"/.tmux.conf "$HOME"/.tmux.conf
