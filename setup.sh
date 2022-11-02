@@ -13,6 +13,8 @@ echo ".zshrc"
 ln -sf "$DIR_PATH"/zsh/.zshrc "$HOME"/.zshrc
 echo ".zsh_profile"
 ln -sf "$DIR_PATH"/zsh/.zsh_profile "$HOME"/.zsh_profile
+echo ".secrets"
+[[ -f "$DIR_PATH"/zsh/.secrets ]] && ln -sf "$DIR_PATH/zsh/.secrets" "$HOME/.secrets"
 echo "labymod/zsh/labymod.zsh_profile"
 [[ -f "$DIR_PATH"/labymod/zsh/labymod.zsh_profile ]] && ln -sf "$DIR_PATH/labymod/zsh/labymod.zsh_profile" "$HOME/labymod.zsh_profile"
 echo ".vim/"
