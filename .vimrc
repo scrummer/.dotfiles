@@ -14,6 +14,9 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'mhinz/vim-rfc'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'jbranchaud/vim-fourohfour'
 call plug#end()
 
 " Allow writing files without sudo
