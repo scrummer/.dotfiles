@@ -21,14 +21,15 @@ export TERM=screen-256color
 [[ ! -f ~/labymod.zsh_profile ]] || source ~/labymod.zsh_profile
 [[ ! -f ~/secrets.zsh_profile ]] || source ~/secrets.zsh_profile
 
-# IntelliJ launch command
-ii() {
-  $HOME/.bin/idea "$1" > /dev/null 2>&1 &
-}
-
-clion() {
-  $HOME/.bin/clion "$1" > /dev/null 2>&1 &
-}
+# IntelliJ launch command (Linux only)
+if [[ "$OS_TYPE" == "LINUX" ]]; then
+    ii() {
+      $HOME/.bin/idea "$1" > /dev/null 2>&1 &
+    }
+    clion() {
+      $HOME/.bin/clion "$1" > /dev/null 2>&1 &
+    }
+fi
 
 # DB helper
 clean-definer() {
@@ -47,5 +48,5 @@ clean-definer() {
   else
     echo "Given file does not exist!";
     return;
-  fi;  
+  fi;
 }
