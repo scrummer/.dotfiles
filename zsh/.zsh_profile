@@ -1,19 +1,51 @@
 alias ll='ls -lah'
 alias 'do'='docker'
-alias doco='docker-compose'
+alias doco='docker compose'
 alias python=python3
 alias dsa='ddev sequelace'
 alias rmf='rm -rf'
 alias t='tmux'
 alias diff='colordiff -wBy -W160'
+alias xclip='xclip -selection clipboard'
+alias k='kubectl'
 
 export PATH="$PATH:$HOME/.bin"
 export COMPOSER_MEMORY_LIMIT=-1
 export COMPOSER_PROCESS_TIMEOUT=2000
 export COMPOSE_HTTP_TIMEOUT=100
+export TERM=screen-256color
 
 #export SSH_AUTH_SOCK=$HOME/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 
 # Custom (private) stuff
 [[ ! -f ~/labymod.zsh_profile ]] || source ~/labymod.zsh_profile
 [[ ! -f ~/secrets.zsh_profile ]] || source ~/secrets.zsh_profile
+
+# IntelliJ launch command
+ii() {
+  $HOME/.bin/idea "$1" > /dev/null 2>&1 &
+}
+
+clion() {
+  $HOME/.bin/clion "$1" > /dev/null 2>&1 &
+}
+
+# DB helper
+clean-definer() {
+  if [[ $# -eq 0 ]]; then
+    echo "Please specify the file you want to clean."
+    return;
+  fi;
+
+  file=$1;
+
+  if [[ -f $file ]]; then
+    content=$(LANG=UTF8 LC_ALL=UTF8 LC_CTYPE=UTF8 sed -e 's/DEFINER[ ]*=[ ]*[^*]*\*/\*/' < "$file");
+    echo "$content" > "$file";
+    printf "\nSuccessfully cleaned up definers!\n";
+    return;
+  else
+    echo "Given file does not exist!";
+    return;
+  fi;  
+}
