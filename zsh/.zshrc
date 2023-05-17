@@ -105,7 +105,7 @@ source ~/.zsh_profile
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export PATH="$PATH:$HOME/.ddev/.bin"
+export PATH="$PATH:$HOME/.ddev/.bin:${KREW_ROOT:-$HOME/.krew}/bin"
 export EDITOR="vi"
 
 # Spawn default tmux session
