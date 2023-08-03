@@ -1,5 +1,6 @@
 alias ll='ls -lah'
-alias 'do'='docker'
+alias cdd='cd "$HOME/Downloads"'
+#alias 'do'='docker'
 alias doco='docker compose'
 alias python=python3
 alias dsa='ddev sequelace'
@@ -10,12 +11,17 @@ alias xclip='xclip -selection clipboard'
 alias k='kubectl'
 alias kns='kubectl ns'
 alias kctx='kubectl ctx'
+alias enp='enpasscli -sort'
+alias subfinder='docker run projectdiscovery/subfinder:latest'
+alias katana='docker run projectdiscovery/katana:latest'
 
-export PATH="$PATH:$HOME/.bin"
 export COMPOSER_MEMORY_LIMIT=-1
 export COMPOSER_PROCESS_TIMEOUT=2000
 export COMPOSE_HTTP_TIMEOUT=100
 export TERM=screen-256color
+
+# PATH
+export PATH="$PATH:$HOME/.bin:/usr/local/go/bin"
 
 #export SSH_AUTH_SOCK=$HOME/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 
@@ -51,4 +57,9 @@ clean-definer() {
     echo "Given file does not exist!";
     return;
   fi;
+}
+
+# nd() - New directory (mkdir && cd)
+nd() {
+  mkdir -p -- "$1" && cd -P -- "$1"
 }
