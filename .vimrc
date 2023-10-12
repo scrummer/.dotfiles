@@ -95,6 +95,9 @@ inoremap <F1> <ESC>:set invfullscreen<CR>a
 nnoremap <F1> :set invfullscreen<CR>
 vnoremap <F1> :set invfullscreen<CR>
 
+" Clipboard config
+set clipboard=unnamedplus
+
 " Textmate holdouts
 
 " Formatting

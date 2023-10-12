@@ -1,1 +1,1 @@
-/Users/jpache/dev/.dotfiles/.vim
+/home/jpache/dev/.dotfiles/.vim

@@ -19,11 +19,10 @@ export COMPOSER_MEMORY_LIMIT=-1
 export COMPOSER_PROCESS_TIMEOUT=2000
 export COMPOSE_HTTP_TIMEOUT=100
 export TERM=screen-256color
+#export SSH_AUTH_SOCK="$HOME/.1password/agent.sock"
 
 # PATH
-export PATH="$PATH:$HOME/.bin:/usr/local/go/bin"
-
-#export SSH_AUTH_SOCK=$HOME/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
+export PATH="$PATH:$HOME/.bin:/usr/local/go/bin:$HOME/.dotnet"
 
 # Custom (private) stuff
 [[ ! -f ~/labymod.zsh_profile ]] || source ~/labymod.zsh_profile
@@ -36,6 +35,9 @@ if [[ "$OS_TYPE" == "LINUX" ]]; then
     }
     clion() {
       $HOME/.bin/clion "$1" > /dev/null 2>&1 &
+    }
+    rider() {
+      $HOME/.bin/rider "$1" > /dev/null 2>&1 &
     }
 fi
 
@@ -62,4 +64,12 @@ clean-definer() {
 # nd() - New directory (mkdir && cd)
 nd() {
   mkdir -p -- "$1" && cd -P -- "$1"
+}
+
+# LabyMod updater
+update-lm() {
+  tmpFile="/tmp/labymod-latest.deb"
+  wget https://releases.r2.labymod.net/launcher/linux/x64/labymodlauncher_latest_amd64.deb -O "${tmpFile}"
+  sudo dpkg -i ${tmpFile}
+  rm -rf "${tmpFile}"
 }
