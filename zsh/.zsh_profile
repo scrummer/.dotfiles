@@ -14,6 +14,7 @@ alias kctx='kubectl ctx'
 alias enp='enpasscli -sort'
 alias subfinder='docker run projectdiscovery/subfinder:latest'
 alias katana='docker run projectdiscovery/katana:latest'
+alias glci='gitlab-ci-local'
 
 export COMPOSER_MEMORY_LIMIT=-1
 export COMPOSER_PROCESS_TIMEOUT=2000
@@ -22,7 +23,7 @@ export TERM=screen-256color
 #export SSH_AUTH_SOCK="$HOME/.1password/agent.sock"
 
 # PATH
-export PATH="$PATH:$HOME/.bin:/usr/local/go/bin:$HOME/.dotnet"
+export PATH="$PATH:$HOME/.bin:/usr/local/go/bin:$HOME/.dotnet:/usr/local/texlive/2023/bin/x86_64-linux:$HOME/go/bin"
 
 # Custom (private) stuff
 [[ ! -f ~/labymod.zsh_profile ]] || source ~/labymod.zsh_profile
@@ -72,4 +73,10 @@ update-lm() {
   wget https://releases.r2.labymod.net/launcher/linux/x64/labymodlauncher_latest_amd64.deb -O "${tmpFile}"
   sudo dpkg -i ${tmpFile}
   rm -rf "${tmpFile}"
+}
+
+# Discord updater
+update-discord() {
+  wget -O /tmp/discord-installer.deb "https://discord.com/api/download/canary?platform=linux&format=deb"
+  sudo dpkg -i /tmp/discord-installer.deb
 }
